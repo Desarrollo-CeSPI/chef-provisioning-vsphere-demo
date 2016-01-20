@@ -9,6 +9,8 @@ with_machine_options :bootstrap_options => {
   num_cpus: 2,
   memory_mb: 4096,
   datacenter: node[:prueba][:vsphere][:datacenter],
+  datastore: node[:prueba][:vsphere][:datastore],
+  network_name: node[:prueba][:vsphere][:network_name],
   resource_pool: node[:prueba][:vsphere][:resource_pool],
   template_folder: node[:prueba][:vsphere][:template_folder],
   template_name: node[:prueba][:vsphere][:template_name],
@@ -19,4 +21,5 @@ with_machine_options :bootstrap_options => {
     password: node[:prueba][:vsphere][:ssh][:password],
     paranoid: node[:prueba][:vsphere][:ssh][:paranoid]
   }
-}
+},
+sudo: node[:prueba][:sudo]
