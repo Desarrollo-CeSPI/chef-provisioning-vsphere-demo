@@ -9,8 +9,12 @@ Es necesario disponer de:
 
 * Acceso al server con vsphere con un usuario con privilegios
 * Disponer de un template de una VM que tenga instalado:
-  * VMWare tools
-  * Blacklist del driver i2c_pi4
+  * VMWare tools:
+    * [Como instalar las VMWare tools](http://partnerweb.vmware.com/GOSIG/Ubuntu_14_04.html)
+    * [Como personalizar un template para VMWare](http://www.virtxpert.com/preparing-ubuntu-template-virtual-machines/)
+    * Considerar además la posibilidad de usar [Packer](https://www.packer.io) para
+      crear el template
+  * Blacklist del driver i2c_piix4
 * Crear una politica de vm donde se configure una dirección IP que no se utilice
   de forma estática (esto es necesario para que chef-provisioning pueda
   configurar la dirección IP de la VM)
