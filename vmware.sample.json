@@ -1,0 +1,28 @@
+{
+  "prueba": {
+    "vsphere": {
+      "host": "vcenter.hostname.net",
+      "user": "username",
+      "password": "password",
+      "datacenter": "DCName",
+      "resource_pool": "Cluster",
+      "vm_folder": "FOLDER",
+      "template_folder": "FOLDER",
+      "template_name": "ubuntu-14.04",
+      "cspec": {
+        "name": "Custom Specification",
+        "ipsettings": {
+          "ip": "33.33.33.33",
+          "subnetMask": "255.255.255.0",
+          "gateway": [ "33.33.33.1" ],
+          "dnsServerList": [ "33.33.33.2" ]
+        },
+        "domain": "local",
+        "ssh": {
+          "user": "root",
+          "password": "password"
+        }
+      }
+    }
+  }
+}
